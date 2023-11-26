@@ -3,9 +3,12 @@ function askForSquares() {
 
     button.addEventListener("click", () => {
         const answer = prompt("Please eneter number of squares per side for the new grid.");
-        if (answer) {
+        const parsedAnswer = parseInt(answer);
+        if (parsedAnswer < 100) {
             deleteSquare();
-            createSquare(parseInt(answer));
+            createSquare(parsedAnswer);
+        } else {
+            alert("Please provide smaller number");
         }
     })
 }
