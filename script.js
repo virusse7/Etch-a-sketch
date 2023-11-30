@@ -21,6 +21,7 @@ function deleteSquare() {
 function createSquare(numberOfSquares) {
     const container = document.querySelector(".container");
     container.style.gridTemplateColumns = `repeat(${numberOfSquares}, 1fr)`;
+    container.style.maxWidth = `${numberOfSquares * 60}px`;
 
     if (!numberOfSquares) {
         for (let i = 0; i < 256; i++) {
